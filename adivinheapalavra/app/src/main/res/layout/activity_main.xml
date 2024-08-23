@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- Aqui é onde o jogador digita a palavra que ele acha que é a correta -->
+    <EditText
+        android:id="@+id/campoEntrada"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Digite a palavra" />
+
+    <!-- Este é o botão que o jogador clica para verificar se a palavra digitada está correta -->
+    <Button
+        android:id="@+id/botaoAdivinhar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Adivinhar"
+        android:layout_below="@id/campoEntrada"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" />
+
+    <!-- Esta parte mostra mensagens para o jogador, como "Parabéns" ou "Tente novamente" -->
+    <TextView
+        android:id="@+id/textoResultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/botaoAdivinhar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="Tente adivinhar a palavra!"
+        android:textSize="18sp" />
+
+    <!-- Este botão aparece quando o jogo termina para que o jogador possa tentar de novo -->
+    <Button
+        android:id="@+id/botaoVoltar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Voltar"
+        android:layout_below="@id/textoResultado"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:visibility="gone" /> <!-- O botão começa escondido e só aparece quando o jogo acaba -->
+
+</RelativeLayout>
